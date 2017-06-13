@@ -1,0 +1,23 @@
+<nav class="nav has-shadow">
+    <div class="container">
+
+        <% if (user) {%>
+        <div class="nav-left">
+            <a class="nav-item is-tab"><%= user.displayName%></a>
+        </div>
+        <% } %>
+
+       <div class="nav-right nav-menu">
+
+           <% if (!user) {%>
+                <a class="nav-item is-tab" id="sign-in">
+                    Sign In
+                </a>
+           <% } else { %>
+                <a class="nav-item is-tab" id="sign-out">
+                    Sign out
+                </a>
+           <% } %>
+        </div>
+    </div>
+</nav>
